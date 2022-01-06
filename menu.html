@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Menu</title>
+    <script src="jquery-3.2.1.min.js"></script>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    .menu
+    {
+        padding: 5px;
+        background-color: rgb(74, 122, 167);
+        width: 30%;
+        height: 100%;
+        position: fixed;
+    }
+    .menu ul
+    {
+        list-style-type: none
+    }
+    .menu ul li
+    {
+        float: left;
+        width: 100%;
+    }
+    .menu ul li a
+    {
+        text-decoration: none;
+        padding: 10px;
+        display: block;
+        color: white;
+    }
+    .menu ul li a:hover
+    {
+        background-color: rgb(5, 44, 116);
+        color: rgb(255, 255, 255);
+    }
+    .menu ul li .sub-menu
+    {
+        width: 100%;
+    }
+    .menu ul li .sub-menu ul
+    {
+        width: 70%;
+        margin-left: 30%;
+    }
+    .menu ul li .sub-menu ul li a{
+        background-color: rgb(71, 129, 255);
+    }
+    .menu ul li .sub-menu ul li a:hover{
+        background-color: rgb(81, 196, 241);
+        color: white;
+
+    }
+
+</style>
+<body>
+    <div class="container">
+        <div class="menu">
+            <ul>
+                <!-- <li><a href="">Fruits</a>
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a href="">Apple</a></li>
+                            <li><a href="">Banana</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="">Drink</a>
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a href="">Apple</a></li>
+                            <li><a href="">Banana</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="">Vegetable</a>
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a href="">Apple</a></li>
+                            <li><a href="">Banana</a></li>
+                        </ul>
+                    </div>
+                </li> -->
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+    $(document).ready(function(){
+        var myMenu ={
+            "Fruits":["apple","Banana"],
+            "Drinks":["milk","Orange juice"],
+            "Vegetable":["Carrots","Broccoli","Garlic","Kale"],
+        };
+        
+        getmenu();
+        // function getmenu(){
+        // var txt='';
+        // for(key in myMenu)
+        // {
+        //     var txt1 ='';
+        //     for(x in myMenu[key])
+        //     {
+        //         txt1+= '<li><a>'+myMenu[key][x]+'</a></li>';
+        //     }
+        //     var Submenu = '<div class="sub-menu"><ul>'+txt1+'</ul></div>';
+        //   txt += '<li><a>'+key+'</a>'+Submenu+'</li>'; 
+        // };
+        // $('.menu').find('ul').html(txt);
+        // };
+        function getmenu(){
+            var txt= '';
+            for(key in myMenu)
+            {
+                var txt1 ='';
+                for(x in myMenu[key])
+                {
+                    txt1 +='<li><a>'+myMenu[key][x]+'</a></li>';
+                }
+                var submenu = '<div class="sub-menu"><ul>'+txt1+'</ul></div>';
+                txt +='<li><a>'+key+'</a>'+submenu+'</li>';
+            }
+            $('.menu').find('ul').html(txt);
+        };
+       
+    });
+</script>
+</html>
