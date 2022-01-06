@@ -3,13 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap" rel="stylesheet"> <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    body{
+        font-family: 'Luxurious Roman', cursive;
+        background-color: rgb(161, 159, 159);
+    }
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }   
+    .head
+    {
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: fixed;
+        background-color: rgb(39, 122, 155);
+        overflow: hidden;
+        padding: 5px;
+        z-index: 1;
+    }
+    .head .logo
+    {
+        width: 20%;
+        font-size: 22px;
+        padding: 6px;
+        color: wheat;
+        float: left;
+    }
+    .head .menu
+    {
+        width: 80%;
+        float: left;
+    }
+    .head .menu ul
+    {
+        list-style-type: none;
+        float: right;
+    }
+    .head .menu ul li
+    {
+        float: left;
+    }
+    .head .menu ul li a
+    {
+        display: block;
+        text-decoration: none;
+        padding: 10px 15px;
+        color: wheat;
+    }
+    .container{
+        background-color: green;
+        margin-top: 50px;
+    }
+    .container .slide-box
+    {
+        width: 100%;
+        height: 50vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+</style>
 <body>
-    <h1>Hello Everyone</h1>
-    <h1>Hello Everyone</h1>
-    <h1>Hello Everyone</h1>
-    <h1>Hello Everyone</h1>
+    <header class="head">
+        <div class="logo">Logo</div>
+        <div class="menu">
+            <ul>
+                <li><a href="#"><i class="fas fa-search"></i></a></li>
+                <li><a href="#"><i class="fas fa-home"></i></a></li>
+                <li><a href="#">Product1</a></li>
+                <li><a href="#">Product2</a></li>
+                <li><a href="#">Product3</a></li>
+                <li><a href="#">Product4</a></li>
+                <li><a href="#">Product5</a></li>
+            </ul>
+        </div>
+    </header>
+    <section class="container">
+        <div class="slide-box" style="background-image:url(1.png)";></div>
+    </section>
 </body>
 </html>
